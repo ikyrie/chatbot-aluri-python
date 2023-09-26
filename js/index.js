@@ -5,7 +5,7 @@ let botaoEnviar = document.querySelector('#botao-enviar');
 function enviarMensagem() {
     if(input.value == "" || input.value == null) return;
     let message = input.value;
-    let novaBolha = criaBolhaBot();
+    let novaBolha = criaBolhaUsuario();
     novaBolha.innerHTML = message;
     chat.appendChild(novaBolha);
     input.value = "";
