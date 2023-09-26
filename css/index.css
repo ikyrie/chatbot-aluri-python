@@ -35,6 +35,76 @@ body {
     gap: 2.8125rem;
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 10rem - 5rem);
+
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+
+.chat::-webkit-scrollbar {
+    display: none;
+}
+
+.chat__bolha {
+    max-width: 60%;
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-size: 1.375rem;
+    margin: 1.5rem;
+    position: relative;
+}
+
+.chat__bolha--bot {
+    background-color: #5385C3;
+}
+
+.chat__bolha--bot::after {
+    content: "";
+    display: block;
+
+    height: 2.5rem;
+    width: 2.5rem;
+
+    position: absolute;
+    top: 0;
+    right: calc(-2.5rem - 1rem);
+
+    background-image: url(../img/icone-chatbot.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.chat__bolha--usuario {
+    border: 1px solid #5385C3;
+    align-self: flex-end;
+}
+
+.chat__bolha--usuario::before {
+    content: "";
+    display: block;
+
+    height: 2.5rem;
+    width: 2.5rem;
+
+    position: absolute;
+    top: 0;
+    left: calc(-2.5rem - 1rem);
+
+    background-image: url(../img/icone-perfil.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .entrada {
     height: 10rem;
     position: relative;
