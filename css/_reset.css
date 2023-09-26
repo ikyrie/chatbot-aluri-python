@@ -21,3 +21,8 @@ a:visited {
 img {
     display: block;
 }
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+}
