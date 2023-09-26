@@ -8,6 +8,7 @@ function enviarMensagem() {
     let novaBolha = criaBolhaUsuario();
     novaBolha.innerHTML = message;
     chat.appendChild(novaBolha);
+    vaiParaFinalDoChat();
     input.value = "";
 }
 
@@ -21,6 +22,10 @@ function criaBolhaBot() {
     let bolha = document.createElement('p');
     bolha.classList = 'chat__bolha chat__bolha--bot';
     return bolha;
+}
+
+function vaiParaFinalDoChat() {
+    chat.scrollTop = chat.scrollHeight;
 }
 
 botaoEnviar.addEventListener('click', enviarMensagem);
